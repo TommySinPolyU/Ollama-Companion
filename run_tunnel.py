@@ -18,6 +18,11 @@ def start_tunnel():
             if url:
                 print(f"Tunnel URL: {url.group()}")
                 break
+        elif '.citrusinno.com' in line:
+            url = re.search(r'https://[a-zA-Z0-9-]+\.citrusinno\.com', line)
+            if url:
+                print(f"Tunnel URL: {url.group()}")
+                break
 
     # After 10 seconds, continue running without printing
     while True:
