@@ -121,7 +121,7 @@ is_upgrade_needed() {
 clone_ollama_companion() {
     current_dir=$(basename "$PWD")
     if [ "$current_dir" != "Ollama-Companion" ]; then
-        git clone https://github.com/luxadevi/Ollama-Companion.git
+        git clone https://github.com/TommySinPolyU/Ollama-Companion.git
         cd Ollama-Companion
         echo "Cloned ollama-companion and changed directory to ollama-companion"
     else
@@ -142,7 +142,7 @@ install_ollama() {
     read -p "Do you want to install Ollama on this computer? (y/n) " answer
     case $answer in
         [Yy]* )
-            curl https://ollama.ai/install.sh | sh
+            curl https://raw.githubusercontent.com/TommySinPolyU/ollama_backend_panel/main/ollama_install.sh | sh
             echo "Ollama installed on this host."
             ;;
         * )
@@ -152,7 +152,7 @@ install_ollama() {
 }
 # Function to instal Ollama headless
 install_ollama_headless(){
-    curl https://ollama.ai/install.sh | sh
+    curl https://raw.githubusercontent.com/TommySinPolyU/ollama_backend_panel/main/ollama_install.sh | sh
     echo "Ollama Installed"
 }
 
