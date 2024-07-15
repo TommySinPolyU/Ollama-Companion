@@ -37,7 +37,7 @@ class ProcessMonitor:
 
     def run_ollama(self):
         os.environ["OLLAMA_HOST"] = "0.0.0.0:11434"
-        os.environ["OLLAMA_ORIGINS"] = "http://0.0.0.0:*"
+        os.environ["OLLAMA_ORIGINS"] = "https://chatdemo.citrusinno.com"
 
         cmd = "ollama serve"
         # Redirect subprocess output to /dev/null
