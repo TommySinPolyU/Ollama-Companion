@@ -48,6 +48,7 @@ COPY --from=builder /go/src/github.com/jmorganca/ollama/llama.cpp/build/bin /oll
 
 EXPOSE 11434
 ENV OLLAMA_HOST 0.0.0.0
+ENV OLLAMA_ORIGINS https://chatdemo.citrusinno.com
 
 # Set environment variables for NVIDIA compatibility
 ENV PATH=/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

@@ -7,6 +7,7 @@ import sys
 import os
 import logging
 from flask import stream_with_context
+from flask_cors import CORS
 
 # Add the parent directory (project) to the sys.path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
@@ -16,6 +17,7 @@ from modules.shared import shared
 
 api_url = shared['api_endpoint']['url']
 app = Flask(__name__)
+CORS(app)
 
 # Define a chunk size for streaming
 

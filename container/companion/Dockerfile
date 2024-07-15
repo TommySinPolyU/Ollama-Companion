@@ -39,6 +39,7 @@ COPY --from=builder /go/src/github.com/jmorganca/ollama/llama.cpp/build/bin /oll
 
 EXPOSE 8501
 ENV OLLAMA_HOST 0.0.0.0
+ENV OLLAMA_ORIGINS https://chatdemo.citrusinno.com
 
 ## Set the entry point to run.sh
 ENTRYPOINT ["/run.sh"]

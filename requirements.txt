@@ -1,6 +1,7 @@
 streamlit
 requests
 flask
+flask_cors
 flask-cloudflared
 litellm
 huggingface_hub
