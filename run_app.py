@@ -4,7 +4,7 @@ import re
 def start_tunnel():
     print("Starting Cloudflare Tunnel...")
     # Start the Cloudflare Tunnel and capture its output
-    process = subprocess.Popen(['pycloudflared', 'tunnel', '--url', 'http://127.0.0.1:8501'],
+    process = subprocess.Popen(['cloudflared', 'tunnel', 'run', '--url', 'http://127.0.0.1:8501', '--token', 'eyJhIjoiNjRiNGVhZmYzNzJhZWE5NTBjMTMyZTgwNDAzMmM2MWYiLCJ0IjoiNWNlNzNlOGMtYmRiNy00NjVlLWJhZDktNzA4NTA5NWNhYTg4IiwicyI6Ik1HSmlNamhtWm1VdFl6WTJOeTAwTURZNUxUZ3laREF0WXpNMk9UZ3pOVEUxTVRneCJ9'],
                                stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
 
     # Read the output line by line and search for the URL

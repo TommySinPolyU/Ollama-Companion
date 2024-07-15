@@ -9,6 +9,7 @@ Pyyaml
 httpx
 APScheduler
 cryptography
+cloudflared
 pycloudflared
 sentencepiece
 transformers
